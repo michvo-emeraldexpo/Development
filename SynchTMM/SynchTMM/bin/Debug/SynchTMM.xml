@@ -1,0 +1,371 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SynchTMM
+</name>
+</assembly>
+<members>
+<member name="T:TMMSynch.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:TMMSynch.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:TMMSynch.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:TMMSynch.TMMWebService.CRMDBWebService">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.#ctor">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.authenticateCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.queryUsersCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.fetchUsersCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.querySalesCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesCompleteCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesCompleteByCountCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.queryProductsCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.fetchProductsCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.queryGoalsCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.fetchGoalsCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.queryRowsCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.queryRowsPHPCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.fetchRowsCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.fetchRowsByCountCompleted">
+<remarks/>
+</member>
+<member name="E:TMMSynch.TMMWebService.CRMDBWebService.updateRowsCompleted">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.authenticate(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.authenticateAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.authenticateAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryUsers(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryUsersAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryUsersAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchUsers(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchUsersAsync(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchUsersAsync(System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.querySales(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.querySalesAsync(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.querySalesAsync(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchSales(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesAsync(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesAsync(System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesComplete(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesCompleteAsync(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesCompleteAsync(System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesCompleteByCount(System.String,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesCompleteByCountAsync(System.String,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchSalesCompleteByCountAsync(System.String,System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryProducts(System.String,System.String,System.String,System.String,System.Int32,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryProductsAsync(System.String,System.String,System.String,System.String,System.Int32,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryProductsAsync(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchProducts(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchProductsAsync(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchProductsAsync(System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryGoals(System.String,System.String,System.Int32,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryGoalsAsync(System.String,System.String,System.Int32,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryGoalsAsync(System.String,System.String,System.Int32,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchGoals(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchGoalsAsync(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchGoalsAsync(System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryRows(System.String,System.String,System.String,System.Object[])">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryRowsAsync(System.String,System.String,System.String,System.Object[])">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryRowsAsync(System.String,System.String,System.String,System.Object[],System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryRowsPHP(System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryRowsPHPAsync(System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.queryRowsPHPAsync(System.String,System.String,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchRows(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchRowsAsync(System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchRowsAsync(System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchRowsByCount(System.String,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchRowsByCountAsync(System.String,System.Int32,System.Int32)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.fetchRowsByCountAsync(System.String,System.Int32,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.updateRows(System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.updateRowsAsync(System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.updateRowsAsync(System.String,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:TMMSynch.TMMWebService.CRMDBWebService.CancelAsync(System.Object)">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.authenticateCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.authenticateCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.authenticateCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryUsersCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryUsersCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.queryUsersCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchUsersCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchUsersCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.fetchUsersCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.querySalesCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.querySalesCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.querySalesCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchSalesCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchSalesCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.fetchSalesCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchSalesCompleteCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchSalesCompleteCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.fetchSalesCompleteCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchSalesCompleteByCountCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchSalesCompleteByCountCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.fetchSalesCompleteByCountCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryProductsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryProductsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.queryProductsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchProductsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchProductsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.fetchProductsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryGoalsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryGoalsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.queryGoalsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchGoalsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchGoalsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.fetchGoalsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryRowsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryRowsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.queryRowsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryRowsPHPCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.queryRowsPHPCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.queryRowsPHPCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchRowsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchRowsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.fetchRowsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchRowsByCountCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.fetchRowsByCountCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.fetchRowsByCountCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.updateRowsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:TMMSynch.TMMWebService.updateRowsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:TMMSynch.TMMWebService.updateRowsCompletedEventArgs.Result">
+<remarks/>
+</member>
+</members>
+</doc>

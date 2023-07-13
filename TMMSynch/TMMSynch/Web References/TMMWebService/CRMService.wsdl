@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://magazinemanager.com/webservices/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://magazinemanager.com/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://magazinemanager.com/webservices/">
+      <s:element name="authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="authenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSpName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryUsersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fetchUsersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="querySales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSpName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBusUnit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProduct" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIssueName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCommRep" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="querySalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="querySalesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchSales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchSalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fetchSalesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchSalesComplete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchSalesCompleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fetchSalesCompleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchSalesCompleteByCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowCnt" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchSalesCompleteByCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fetchSalesCompleteByCountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSpName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBusUnit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProduct" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIssueName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryProductsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fetchProductsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryGoals">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSpName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDept" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryGoalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryGoalsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchGoals">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchGoalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fetchGoalsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryRows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSpName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strQueryType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="queryRowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryRowsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryRowsPHP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSpName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strQueryType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryRowsPHPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryRowsPHPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchRows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchRowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fetchRowsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchRowsByCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="strRowCnt" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fetchRowsByCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fetchRowsByCountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateRows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSpName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlRows" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateRowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateRowsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="authenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:authenticate" />
+  </wsdl:message>
+  <wsdl:message name="authenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:authenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:queryUsers" />
+  </wsdl:message>
+  <wsdl:message name="queryUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:queryUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:fetchUsers" />
+  </wsdl:message>
+  <wsdl:message name="fetchUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:fetchUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="querySalesSoapIn">
+    <wsdl:part name="parameters" element="tns:querySales" />
+  </wsdl:message>
+  <wsdl:message name="querySalesSoapOut">
+    <wsdl:part name="parameters" element="tns:querySalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchSalesSoapIn">
+    <wsdl:part name="parameters" element="tns:fetchSales" />
+  </wsdl:message>
+  <wsdl:message name="fetchSalesSoapOut">
+    <wsdl:part name="parameters" element="tns:fetchSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchSalesCompleteSoapIn">
+    <wsdl:part name="parameters" element="tns:fetchSalesComplete" />
+  </wsdl:message>
+  <wsdl:message name="fetchSalesCompleteSoapOut">
+    <wsdl:part name="parameters" element="tns:fetchSalesCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchSalesCompleteByCountSoapIn">
+    <wsdl:part name="parameters" element="tns:fetchSalesCompleteByCount" />
+  </wsdl:message>
+  <wsdl:message name="fetchSalesCompleteByCountSoapOut">
+    <wsdl:part name="parameters" element="tns:fetchSalesCompleteByCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:queryProducts" />
+  </wsdl:message>
+  <wsdl:message name="queryProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:queryProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:fetchProducts" />
+  </wsdl:message>
+  <wsdl:message name="fetchProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:fetchProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryGoalsSoapIn">
+    <wsdl:part name="parameters" element="tns:queryGoals" />
+  </wsdl:message>
+  <wsdl:message name="queryGoalsSoapOut">
+    <wsdl:part name="parameters" element="tns:queryGoalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchGoalsSoapIn">
+    <wsdl:part name="parameters" element="tns:fetchGoals" />
+  </wsdl:message>
+  <wsdl:message name="fetchGoalsSoapOut">
+    <wsdl:part name="parameters" element="tns:fetchGoalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryRowsSoapIn">
+    <wsdl:part name="parameters" element="tns:queryRows" />
+  </wsdl:message>
+  <wsdl:message name="queryRowsSoapOut">
+    <wsdl:part name="parameters" element="tns:queryRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryRowsPHPSoapIn">
+    <wsdl:part name="parameters" element="tns:queryRowsPHP" />
+  </wsdl:message>
+  <wsdl:message name="queryRowsPHPSoapOut">
+    <wsdl:part name="parameters" element="tns:queryRowsPHPResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchRowsSoapIn">
+    <wsdl:part name="parameters" element="tns:fetchRows" />
+  </wsdl:message>
+  <wsdl:message name="fetchRowsSoapOut">
+    <wsdl:part name="parameters" element="tns:fetchRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchRowsByCountSoapIn">
+    <wsdl:part name="parameters" element="tns:fetchRowsByCount" />
+  </wsdl:message>
+  <wsdl:message name="fetchRowsByCountSoapOut">
+    <wsdl:part name="parameters" element="tns:fetchRowsByCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateRowsSoapIn">
+    <wsdl:part name="parameters" element="tns:updateRows" />
+  </wsdl:message>
+  <wsdl:message name="updateRowsSoapOut">
+    <wsdl:part name="parameters" element="tns:updateRowsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CRMDBWebServiceSoap">
+    <wsdl:operation name="authenticate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates authentication</wsdl:documentation>
+      <wsdl:input message="tns:authenticateSoapIn" />
+      <wsdl:output message="tns:authenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method queries and returns the count of users</wsdl:documentation>
+      <wsdl:input message="tns:queryUsersSoapIn" />
+      <wsdl:output message="tns:queryUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates fetching of a user</wsdl:documentation>
+      <wsdl:input message="tns:fetchUsersSoapIn" />
+      <wsdl:output message="tns:fetchUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="querySales">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method queries and returns the count of sales rows</wsdl:documentation>
+      <wsdl:input message="tns:querySalesSoapIn" />
+      <wsdl:output message="tns:querySalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchSales">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates fetching of a sales row</wsdl:documentation>
+      <wsdl:input message="tns:fetchSalesSoapIn" />
+      <wsdl:output message="tns:fetchSalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchSalesComplete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates marking a sales row as fetched</wsdl:documentation>
+      <wsdl:input message="tns:fetchSalesCompleteSoapIn" />
+      <wsdl:output message="tns:fetchSalesCompleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchSalesCompleteByCount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates marking a sales rows as fetched</wsdl:documentation>
+      <wsdl:input message="tns:fetchSalesCompleteByCountSoapIn" />
+      <wsdl:output message="tns:fetchSalesCompleteByCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="queryProducts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method queries and returns the count of product rows</wsdl:documentation>
+      <wsdl:input message="tns:queryProductsSoapIn" />
+      <wsdl:output message="tns:queryProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchProducts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates fetching of a product row</wsdl:documentation>
+      <wsdl:input message="tns:fetchProductsSoapIn" />
+      <wsdl:output message="tns:fetchProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="queryGoals">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method queries and returns the count of goal rows</wsdl:documentation>
+      <wsdl:input message="tns:queryGoalsSoapIn" />
+      <wsdl:output message="tns:queryGoalsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchGoals">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates fetching of a goal row</wsdl:documentation>
+      <wsdl:input message="tns:fetchGoalsSoapIn" />
+      <wsdl:output message="tns:fetchGoalsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="queryRows">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method queries and returns the count of requested rows</wsdl:documentation>
+      <wsdl:input message="tns:queryRowsSoapIn" />
+      <wsdl:output message="tns:queryRowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="queryRowsPHP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method queries and returns the count of requested rows</wsdl:documentation>
+      <wsdl:input message="tns:queryRowsPHPSoapIn" />
+      <wsdl:output message="tns:queryRowsPHPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchRows">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates fetching of a requested row</wsdl:documentation>
+      <wsdl:input message="tns:fetchRowsSoapIn" />
+      <wsdl:output message="tns:fetchRowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchRowsByCount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates fetching of a requested row</wsdl:documentation>
+      <wsdl:input message="tns:fetchRowsByCountSoapIn" />
+      <wsdl:output message="tns:fetchRowsByCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRows">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web method facilitates updating DB records</wsdl:documentation>
+      <wsdl:input message="tns:updateRowsSoapIn" />
+      <wsdl:output message="tns:updateRowsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CRMDBWebServiceSoap" type="tns:CRMDBWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="authenticate">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUsers">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/queryUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchUsers">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/fetchUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySales">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/querySales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchSales">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/fetchSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchSalesComplete">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/fetchSalesComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchSalesCompleteByCount">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/fetchSalesCompleteByCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryProducts">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/queryProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchProducts">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/fetchProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGoals">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/queryGoals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchGoals">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/fetchGoals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryRows">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/queryRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryRowsPHP">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/queryRowsPHP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchRows">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/fetchRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchRowsByCount">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/fetchRowsByCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRows">
+      <soap:operation soapAction="http://magazinemanager.com/webservices/updateRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CRMDBWebServiceSoap12" type="tns:CRMDBWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="authenticate">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUsers">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/queryUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchUsers">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/fetchUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySales">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/querySales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchSales">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/fetchSales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchSalesComplete">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/fetchSalesComplete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchSalesCompleteByCount">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/fetchSalesCompleteByCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryProducts">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/queryProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchProducts">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/fetchProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGoals">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/queryGoals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchGoals">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/fetchGoals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryRows">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/queryRows" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryRowsPHP">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/queryRowsPHP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchRows">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/fetchRows" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchRowsByCount">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/fetchRowsByCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRows">
+      <soap12:operation soapAction="http://magazinemanager.com/webservices/updateRows" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CRMDBWebService">
+    <wsdl:port name="CRMDBWebServiceSoap" binding="tns:CRMDBWebServiceSoap">
+      <soap:address location="https://emeraldx.magazinemanager.biz/CRMDBWebService/CRMService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CRMDBWebServiceSoap12" binding="tns:CRMDBWebServiceSoap12">
+      <soap12:address location="https://emeraldx.magazinemanager.biz/CRMDBWebService/CRMService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
